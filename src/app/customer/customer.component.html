@@ -1,0 +1,25 @@
+<button type="button" (click)="goToAdd()" class="btn btn-primary">Thêm mới customer</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Tên</th>
+            <th scope="col">ngày sinh</th>
+            <th scope="col">giới tính</th>
+            <th scope="col">sở thích</th>
+            <th scope="col">Hoạt động</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let cus of customer">
+            <td>{{cus.name}}</td>
+            <td>{{cus.birthday}}</td>
+            <td>{{cus.gender}}</td>
+            <td>{{cus.hobbies}}</td>
+            <td>
+                <button class="btn btn-primary" (click)="updateCustomer(cus.id)">Update</button>
+                <button class="btn btn-primary" (click)="deleteCustomer(cus.id)">Delete</button>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>

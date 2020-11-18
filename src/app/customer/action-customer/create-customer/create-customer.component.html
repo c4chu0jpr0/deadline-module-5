@@ -1,0 +1,53 @@
+<h1>Thêm mới customer</h1>
+<form >
+    <table>
+        <tr>
+            <td><label for="name">Họ và tên:</label></td>
+            <td><input type="text" id="name" name="name" [(ngModel)]="customer.name" ></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Giới tính:</td>
+            <td>
+                <input type="radio" id="male" name="gender" [(ngModel)]="customer.gender" value="nam">
+                <label for="male">Male</label>
+            </td>
+            <td>
+                <input type="radio" id="female" name="gender" [(ngModel)]="customer.gender" value="nữ">
+                <label for="female">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Sở thích:</td>
+            <td>
+                <input type="checkbox" id="book" name="vehicle1" value="book">
+                <label for="vehicle1"> Đọc sách</label>
+            </td>
+            <td>
+                <input type="checkbox" id="firm" name="vehicle2" value="movie">
+                <label for="vehicle2"> Xem phim</label>
+            </td>
+            <td>
+                <input type="checkbox" id="hit" name="vehicle3" value="cigar">
+                <label for="vehicle3"> hút cần</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="birthdaytime">Ngày sinh:</label>
+            </td>
+            <td><input type="datetime-local" id="birthday" [(ngModel)]="customer.birthday" name="birthday"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-primary" (click)="dangki()"  value="Submit">
+            </td>
+        </tr>
+    </table>
+</form> 
+ 
+  
+
+<button class="btn btn-primary" (click)="Back()">Đi tới Trang chủ</button>
